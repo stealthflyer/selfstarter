@@ -2,6 +2,7 @@ class PreorderController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :ipn
 
   def index
+    @images = Dir.glob('app/assets/images/slideshow/*.*').map { |image| image.gsub!("app/assets/images/", "") }
   end
 
   def checkout

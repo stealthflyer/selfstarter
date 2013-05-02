@@ -16,5 +16,6 @@
 //= require jquery-ui
 //= require jquery.details
 //= require jquery.textchange
+//= require jquery.nivo.slider.pack
 //= require preorder
 //= require_tree .

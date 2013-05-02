@@ -19,12 +19,17 @@ Selfstarter =
     # The first time they type in their email, we don't want it to throw a validation error
     $("#email").change ->
       Selfstarter.firstTime = false
-
+      
     # init placeholder image for video
-    $("#video_image").on "click", ->
+    $("#nivo-main-image").on "click", ->
       $("#player").removeClass("hidden")
       $("#player").css('display', 'block')
       $(this).hide()
+
+    $('#slider').nivoSlider({
+      effect : 'fade',          # Specify sets like: 'fold,fade,sliceDown'
+      pauseTime : 3000,         # How long each slide will show
+    });
 
     # if they are using the optional payment options section on the checkout page, need to conditional fix the email
     # field and button to the bottom of the page so it's displayed after selecting a radio button
